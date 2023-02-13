@@ -41,10 +41,22 @@ function orderArray(tab) {
     return tab;
 }
 
-console.log(orderArray(thirdArray));
+console.table(orderArray(thirdArray));
 
     // commit !
-    
+
 // Afficher le nombre médian
+function findMedian(tab) {
+    let length = tab.length;
+    let median = 0;
+    if(length % 2 == 0) {
+        median = (tab[length/2 - 2] + tab[length/2 - 1]) / 2
+    } else {
+        median = tab[ceil(length/2)];
+    }
+    return median;
+}
+
+console.log(findMedian(thirdArray));
 // commit !
 
