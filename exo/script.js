@@ -15,7 +15,7 @@ console.table(secondArray);
 // Créer une fonction pour ordonner ses tableaux 
     // remplir le 3e tableau avec les données des 2 premiers 
 
-thirdArray = firstArray.concat(secondArray);
+thirdArray = (firstArray).concat(secondArray);
 /*for(let i = 0; i < firstArray.length; i++) {
     ordoredArray[i] = firstArray[i];
 }
@@ -24,26 +24,27 @@ for(let j = firstArray.length; j < firstArray.length + secondArray.length; j++) 
 }*/
 
 console.table(thirdArray);
-    // ordonner le tableau
+    //commit !
 
-/*function order(tab) {
+    // Créer la fonction pour ordonner un tableau
+function orderArray(tab) {
     let i = 0;
     while (i < tab.length) {
-        if (tab[i] > tab[i+1]) {
-            let tmpValue = tab[i];
+        if (parseInt(tab[i]) > parseInt(tab[i+1])) {
+            let tmp = tab[i];
             tab[i] = tab[i+1];
-            tab[i+1] = tmpValue;
+            tab[i+1] = tmp;
+            i = 0 - 1;
         }
         i++;
     }
     return tab;
 }
 
-console.table(order(ordoredArray));*/
+console.log(orderArray(thirdArray));
 
-
-
-// commit !
+    // commit !
+    
 // Afficher le nombre médian
 // commit !
 
